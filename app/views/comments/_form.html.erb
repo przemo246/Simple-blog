@@ -1,0 +1,16 @@
+<%= form_with(model: [@post, @post.comments.new], local: true) do |form| %>
+<div class="col-4 mt-4">
+    <div class="mb-3">
+        <%= form.label :author, class: "form-label" %>
+        <%= form.text_field :author, class: "form-control" %>
+    </div>
+    <div class="mn3">
+        <%= form.label :body, class: "form-label" %>
+        <%= form.text_area :body, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+        <%= form.button "Add comment", class: "btn btn-primary mt-2" %>
+    </div>
+</div>
+<% end %>
+    
